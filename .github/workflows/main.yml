@@ -85,6 +85,7 @@ jobs:
           - "hasta"
           - "hki"
           - "hypatia"
+          - "icr_alma"
           - "icr_davros"
           - "ifb_core"
           - "imb"
