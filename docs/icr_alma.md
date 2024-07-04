@@ -26,9 +26,17 @@ sbatch my-nextflow.sh
 ```
 
 Contents of my-nextflow.sh
+TO DO ADD A GOOD BATCH or make it a 1-line from interactive without the sh
 ```
 #!/bin/bash
-TO DO ADD A GOOD BATCH or mae it a 1-line from interactive without the sh
+#SBATCH --job-name=nf-username
+#SBATCH --output=slurm_out.txt
+#SBATCH --partition=master-worker
+#SBATCH --ntasks=1 
+#SBATCH --time=1:00:00
+#SBATCH --mem-per-cpu=4000
+
+nextflow run nf-core/sarek  -profile singularity,test -profile icr_alma
 ```
 
 
