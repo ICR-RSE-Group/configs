@@ -26,7 +26,6 @@ sbatch my-nextflow.sh
 ```
 
 Contents of my-nextflow.sh
-TO DO ADD A GOOD BATCH or make it a 1-line from interactive without the sh
 ```
 #!/bin/bash
 #SBATCH --job-name=nf-username
