@@ -18,7 +18,7 @@ All of the intermediate files required to run the pipeline will be stored in the
 
 > NB: Nextflow will need to submit the jobs via SLURM to the HPC cluster. This can be done from an interactive or normal job. If in doubt contact Scientific Computing.
 
-Alma has a master-worker partition for the long running nextflow manager which spwans jobs to the compute node. A typical nextflow job will run a batch script thorugh sbatch which will run on the master-worker thread spawning the jobs.
+Alma has a master-worker partition for the long running nextflow manager which spawns jobs to the compute node. A typical nextflow job will run a batch script thorugh sbatch which will run on the master-worker thread spawning the jobs.
 
 Command to run the nextflow job:
 ```bash
