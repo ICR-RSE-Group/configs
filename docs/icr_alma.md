@@ -14,7 +14,7 @@ mamba activate mamba_nf
 
 Singularity is installed on the compute nodes of Alma, but not the login nodes. There is no module for Singularity.
 
-The `icr_alma` profile uses a shared Singularity cache at `/data/rds/shared/SINGULARITY/nextflow`. Container images are pulled there once and reused across runs and users, so you do not need to set `NXF_SINGULARITY_CACHEDIR` yourself.
+The `icr_alma` profile uses a shared, read-only Singularity image library at `/data/rds/shared/SINGULARITY/nextflow`. Nextflow uses images from this library when they are available. Any image not in the library is pulled into your own cache: by default `<workDir>/singularity`, or set `NXF_SINGULARITY_CACHEDIR` (e.g. in your `~/.bashrc`) to a directory you own to reuse images across runs.
 
 All of the intermediate files required to run the pipeline will be stored in the `work/` directory. The `icr_alma` profile does not delete the `work/` directory automatically, so that runs can be resumed with `-resume`. Once you are happy with the results, delete the `work/` directory manually to free up space.
 
